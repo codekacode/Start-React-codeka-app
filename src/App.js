@@ -1,12 +1,14 @@
-import React from 'react'; //
-import Hello from './sayHello'
+import React from "react"; 
+import Tweet from "./Tweet";
 
 function App(){
 
   return(
-    <div>
-      <h1>This is a app componen</h1>
-      <Hello />
+    <div className="app">
+      <Tweet name="Codeka"/>
+      <Tweet name="John Snow"/>
+      <Tweet name="Dev Ed"/>
+      <Tweet name="Odicode"/>
     </div>
   );
 }
