@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./App.css"
 
-function Tweet(props){
+function Tweet({name, message}){
+  const [count, setCount] = useState(0)
+  const increment = () => {
+    setCount(count + 1);
+  };
+
   return(
     <div className="tweet">
-      <h3>{props.name}</h3>
-      <p>This is a random tweet</p>
-      <h3>Number of likes</h3>
+      <h3>{name}</h3>
+      <p>{message}</p>
+      <p>{count}</p>
+      <button className="btn" onClick={increment}>Likes</button>
     </div>
   )
 };
